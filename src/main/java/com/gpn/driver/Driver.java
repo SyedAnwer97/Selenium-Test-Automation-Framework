@@ -18,7 +18,7 @@ public final class Driver {
 			DriverManager.setDriver(driver);
 			WebDriverManager.chromedriver().setup();
 			DriverManager.getDriver().manage().window().maximize();
-			DriverManager.getDriver().get(ReadPropertyFile.get("Url"));
+			DriverManager.getDriver().get(ReadPropertyFile.get("URL"));
 		}
 	}
 
