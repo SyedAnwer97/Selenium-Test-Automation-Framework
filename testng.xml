@@ -4,7 +4,7 @@
   <test thread-count="4" name="test" parallel="methods">
     <classes>
       <class name="com.gpn.test.LoginTest"/>
-      <class name="com.gpn.test.HomePageTest"/>
+      <class name="com.gpn.test.DummyPageTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

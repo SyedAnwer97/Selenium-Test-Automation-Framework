@@ -3,13 +3,14 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" parallel="methods" name="test(failed)">
     <classes>
-      <class name="com.gpn.test.LoginTest">
+      <class name="com.gpn.test.DummyPageTest">
         <methods>
           <include name="setup"/>
           <include name="tearDown"/>
-          <include name="test1"/>
+          <include name="test3"/>
+          <include name="test4"/>
         </methods>
-      </class> <!-- com.gpn.test.LoginTest -->
+      </class> <!-- com.gpn.test.DummyPageTest -->
     </classes>
   </test> <!-- test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
