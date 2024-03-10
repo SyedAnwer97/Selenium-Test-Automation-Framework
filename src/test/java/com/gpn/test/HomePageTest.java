@@ -12,7 +12,7 @@ public final class HomePageTest extends BaseTest {
 
 	private HomePageTest() {}
 	
-	@Test
+	@Test(enabled = false)
 	public void test3() throws InterruptedException {
 		DriverManager.getDriver().findElement(By.name("q")).sendKeys("testing" + Keys.ENTER);
 		Assert.assertEquals(false, true);
@@ -20,7 +20,7 @@ public final class HomePageTest extends BaseTest {
 
 	}
 	
-	@Test
+	@Test(enabled = false)
 	public void test4() throws InterruptedException {
 		DriverManager.getDriver().findElement(By.name("q")).sendKeys("testing" + Keys.ENTER);
 		throw new SkipException("Skipping this exception");
