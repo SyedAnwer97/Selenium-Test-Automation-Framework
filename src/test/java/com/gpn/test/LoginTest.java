@@ -1,34 +1,21 @@
 package com.gpn.test;
 
-import java.util.Objects;
-
 import org.assertj.core.api.Assertions;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import com.gpn.driver.DriverManager;
+import com.gpn.pages.AlfaDOCKCustomerLoginPage;
 
 public final class LoginTest extends BaseTest {
 
 	private  LoginTest() {}
 
-	@Test
-	public void test1() throws InterruptedException {
-		DriverManager.getDriver().findElement(By.name("q")).sendKeys("anwer" + Keys.ENTER);
-		Thread.sleep(2000);
-		String Title =DriverManager.getDriver().getTitle();
-		Assert.assertTrue(Objects.nonNull(Title));
-		Assert.assertTrue(Title.length()<=25);
-		Assert.assertTrue(Title.length()>=5);
-		Assertions.assertThat(Title).contains("anwer").isEqualTo("anwer - Google Search");
+	@Test(enabled = true)
+	public void alfaDOCKLoginTest() {
+		String pageTitle =new AlfaDOCKCustomerLoginPage().selectLangauge("English").enterCustomerUsername("sch-dev")
+		.enterCustomerPassword("sch-dev").clickLoginButton().enterUsername("admin")
+		.enterUserPassword("admin").clickLogin().clickAlfaDOCKLogoutButton().clickUserLogout().pageTitle();
+		Assertions.assertThat(pageTitle).isEqualTo("Company Login");
 	}
-	
-	@Test(enabled = false)
-	public void test2() throws InterruptedException {
-		DriverManager.getDriver().findElement(By.name("q")).sendKeys("LAO" + Keys.ENTER);
-		Thread.sleep(2000);
-	}
+
 
 }
