@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.Select;
 import com.google.common.util.concurrent.Uninterruptibles;
 import com.gpn.driver.DriverManager;
 
-public final class AlfaDOCKCustomerLoginPage {
+public final class AlfaDOCKCustomerLoginPage extends ActionEngine {
 	
 	private final By dropdownLangaugeSelect = By.xpath("//select[@id='mySelect']");
 	private final By textboxCustomerUserName  = By.id("username");
@@ -22,22 +22,22 @@ public final class AlfaDOCKCustomerLoginPage {
 	}
 	
 	public AlfaDOCKCustomerLoginPage enterCustomerUsername(String userName) {
-		DriverManager.getDriver().findElement(textboxCustomerUserName).sendKeys(userName);
+		sendKeys(textboxCustomerUserName, userName);
 		return this;
 	}
 	
 	public AlfaDOCKCustomerLoginPage enterCustomerPassword(String password) {
-		DriverManager.getDriver().findElement(textboxCustomerPassword).sendKeys(password);
+		sendKeys(textboxCustomerPassword, password);
 		return this;
 	}
 	
 	public AlfaDOCKUserLoginPage clickLoginButton() {
-		DriverManager.getDriver().findElement(buttonLogin).click();
+		click(buttonLogin);
 		Uninterruptibles.sleepUninterruptibly(Duration.ofSeconds(1));
 		return new AlfaDOCKUserLoginPage();
 	}
 	
 	public String pageTitle() {
-		return DriverManager.getDriver().getTitle();
+		return getTitle();
 	}
 }
