@@ -1,10 +1,9 @@
 package com.gpn.pages;
 
-import java.time.Duration;
-
 import org.openqa.selenium.By;
 
-import com.google.common.util.concurrent.Uninterruptibles;
+import com.gpn.enums.WaitStrategy;
+import com.gpn.factories.ExplicitWaitFactory;
 
 public final class AlfaDOCKUserLoginPage extends ActionEngine{
 	
@@ -14,23 +13,24 @@ public final class AlfaDOCKUserLoginPage extends ActionEngine{
 	private final By buttonLogout = By.xpath("//button[@id='logout']");
 	
 	public AlfaDOCKUserLoginPage enterUsername(String username) {
-		sendKeys(textboxUsername, username);
+		if(ExplicitWaitFactory.performExplictWait(WaitStrategy.TITLECHANGE, "UserLogin")) {
+		sendKeys(textboxUsername, WaitStrategy.PRESCENCE, username);
+		}
 		return this;
 	}
 	
 	public AlfaDOCKUserLoginPage enterUserPassword(String userPassword) {
-		sendKeys(textboxUserPassword, userPassword);
+		sendKeys(textboxUserPassword, WaitStrategy.PRESCENCE, userPassword);
 		return this;
 	}
 	
 	public AlfaDOCKHomePage clickLogin() {
-		click(buttonLogin);
-		Uninterruptibles.sleepUninterruptibly(Duration.ofSeconds(2));
+		click(buttonLogin, WaitStrategy.CLICKABLE);
 		return new AlfaDOCKHomePage();
 	}
 	
 	public AlfaDOCKCustomerLoginPage clickUserLogout() {
-		click(buttonLogout);
+		click(buttonLogout, WaitStrategy.CLICKABLE);
 		return new AlfaDOCKCustomerLoginPage();
 	}
 	

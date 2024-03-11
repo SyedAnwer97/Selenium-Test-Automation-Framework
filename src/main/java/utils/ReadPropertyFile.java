@@ -7,6 +7,7 @@ import java.util.Objects;
 import java.util.Properties;
 
 import com.gpn.constants.FrameworkConstants;
+import com.gpn.enums.ConfigProperties;
 
 public final class ReadPropertyFile {
 
@@ -27,10 +28,10 @@ public final class ReadPropertyFile {
 		}
 	}
 
-	public static String get(String key) throws Exception {
-		if(Objects.isNull(key) || Objects.isNull(CONFIGMAP.get(key.toLowerCase())))
+	public static String get(ConfigProperties key) throws Exception {
+		if(Objects.isNull(key) || Objects.isNull(CONFIGMAP.get(key.name().toLowerCase())))
 			throw new Exception("Property name "+ key + " is not found. Please check config.properties");
-		return CONFIGMAP.get(key.toLowerCase());
+		return CONFIGMAP.get(key.name().toLowerCase());
 	}
 
 }

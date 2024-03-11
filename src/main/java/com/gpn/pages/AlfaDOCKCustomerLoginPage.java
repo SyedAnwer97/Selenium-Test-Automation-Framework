@@ -1,12 +1,8 @@
 package com.gpn.pages;
 
-import java.time.Duration;
-
 import org.openqa.selenium.By;
-import org.openqa.selenium.support.ui.Select;
 
-import com.google.common.util.concurrent.Uninterruptibles;
-import com.gpn.driver.DriverManager;
+import com.gpn.enums.WaitStrategy;
 
 public final class AlfaDOCKCustomerLoginPage extends ActionEngine {
 	
@@ -16,24 +12,22 @@ public final class AlfaDOCKCustomerLoginPage extends ActionEngine {
 	private final By buttonLogin = By.xpath("//button[@id = 'logmein']");
 	
 	public AlfaDOCKCustomerLoginPage selectLangauge(String langauge) {
-		Select select = new Select(DriverManager.getDriver().findElement(dropdownLangaugeSelect));
-		select.selectByVisibleText(langauge);
+		select(dropdownLangaugeSelect, WaitStrategy.PRESCENCE, langauge,"text");
 		return this;
 	}
 	
 	public AlfaDOCKCustomerLoginPage enterCustomerUsername(String userName) {
-		sendKeys(textboxCustomerUserName, userName);
+		sendKeys(textboxCustomerUserName, WaitStrategy.PRESCENCE, userName);
 		return this;
 	}
 	
 	public AlfaDOCKCustomerLoginPage enterCustomerPassword(String password) {
-		sendKeys(textboxCustomerPassword, password);
+		sendKeys(textboxCustomerPassword,WaitStrategy.PRESCENCE, password);
 		return this;
 	}
 	
 	public AlfaDOCKUserLoginPage clickLoginButton() {
-		click(buttonLogin);
-		Uninterruptibles.sleepUninterruptibly(Duration.ofSeconds(1));
+		click(buttonLogin, WaitStrategy.CLICKABLE);
 		return new AlfaDOCKUserLoginPage();
 	}
 	
