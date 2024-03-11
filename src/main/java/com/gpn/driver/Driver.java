@@ -5,6 +5,8 @@ import java.util.Objects;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import com.gpn.enums.ConfigProperties;
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 import utils.ReadPropertyFile;
 
@@ -18,7 +20,7 @@ public final class Driver {
 			DriverManager.setDriver(driver);
 			WebDriverManager.chromedriver().setup();
 			DriverManager.getDriver().manage().window().maximize();
-			DriverManager.getDriver().get(ReadPropertyFile.get("URL"));
+			DriverManager.getDriver().get(ReadPropertyFile.get(ConfigProperties.URL));
 		}
 	}
 

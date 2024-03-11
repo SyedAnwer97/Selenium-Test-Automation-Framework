@@ -15,20 +15,20 @@ public final class ExplicitWaitFactory {
 
 	private ExplicitWaitFactory() {
 	}
+	
+	private static WebElement element = null;
+	private static boolean condition ;
 
 	public static WebElement performExplictWait(WaitStrategy waitstrategy, By by) {
-		WebElement element = null;
+		
 		switch (waitstrategy) {
-		case CLICKABLE:new WebDriverWait(DriverManager.getDriver(), Duration.ofSeconds(FrameworkConstants.getExplicitwait())).until(ExpectedConditions.elementToBeClickable(by));
+		case CLICKABLE: element = new WebDriverWait(DriverManager.getDriver(), Duration.ofSeconds(FrameworkConstants.getExplicitwait())).until(ExpectedConditions.elementToBeClickable(by));
 			break;
-		case PRESCENCE:new WebDriverWait(DriverManager.getDriver(), Duration.ofSeconds(FrameworkConstants.getExplicitwait())).until(ExpectedConditions.presenceOfElementLocated(by));
+		case PRESCENCE:element = new WebDriverWait(DriverManager.getDriver(), Duration.ofSeconds(FrameworkConstants.getExplicitwait())).until(ExpectedConditions.presenceOfElementLocated(by));
 			break;
-		case VISIBLE:new WebDriverWait(DriverManager.getDriver(), Duration.ofSeconds(FrameworkConstants.getExplicitwait())).until(ExpectedConditions.visibilityOfElementLocated(by));
+		case VISIBLE:element = new WebDriverWait(DriverManager.getDriver(), Duration.ofSeconds(FrameworkConstants.getExplicitwait())).until(ExpectedConditions.visibilityOfElementLocated(by));
 			break;
-		case INVISIBLE:new WebDriverWait(DriverManager.getDriver(), Duration.ofSeconds(FrameworkConstants.getExplicitwait())).until(ExpectedConditions.invisibilityOfElementLocated(by));
-			break;
-		case NONE:
-			DriverManager.getDriver().findElement(by);
+		case NONE:element = DriverManager.getDriver().findElement(by);
 			break;
 		default:
 			break;
@@ -36,17 +36,12 @@ public final class ExplicitWaitFactory {
 		return element;
 	}
 	
-	public static WebElement performExplictWait(WaitStrategy waitstrategy, String string) {
-		WebElement element = null;
-		switch (waitstrategy) {
-		case TITLECHANGE:
-			new WebDriverWait(DriverManager.getDriver(), Duration.ofSeconds(FrameworkConstants.getExplicitwait()))
-					.until(ExpectedConditions.titleContains(string));
-			break;
-		default:
-			break;
+	public static boolean performExplictWait(WaitStrategy waitstrategy, String string) {
+		if (waitstrategy == WaitStrategy.TITLECHANGE) {
+			condition = new WebDriverWait(DriverManager.getDriver(), Duration.ofSeconds(FrameworkConstants.getExplicitwait()))
+						.until(ExpectedConditions.titleContains(string));
 		}
-		return element;
+		return condition;
 	}
 
 }
