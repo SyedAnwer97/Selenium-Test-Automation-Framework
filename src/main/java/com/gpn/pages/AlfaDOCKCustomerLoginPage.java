@@ -12,22 +12,22 @@ public final class AlfaDOCKCustomerLoginPage extends ActionEngine {
 	private final By buttonLogin = By.xpath("//button[@id = 'logmein']");
 	
 	public AlfaDOCKCustomerLoginPage selectLangauge(String langauge) {
-		select(dropdownLangaugeSelect, WaitStrategy.PRESCENCE, langauge,"text");
+		select(dropdownLangaugeSelect, WaitStrategy.PRESCENCE, langauge,"text", "langaugeSelect");
 		return this;
 	}
 	
 	public AlfaDOCKCustomerLoginPage enterCustomerUsername(String userName) {
-		sendKeys(textboxCustomerUserName, WaitStrategy.PRESCENCE, userName);
+		sendKeys(textboxCustomerUserName, WaitStrategy.PRESCENCE, userName, "customerUserName");
 		return this;
 	}
 	
 	public AlfaDOCKCustomerLoginPage enterCustomerPassword(String password) {
-		sendKeys(textboxCustomerPassword,WaitStrategy.PRESCENCE, password);
+		sendKeys(textboxCustomerPassword,WaitStrategy.PRESCENCE, password, "customerPassword");
 		return this;
 	}
 	
-	public AlfaDOCKUserLoginPage clickLoginButton() {
-		click(buttonLogin, WaitStrategy.CLICKABLE);
+	public AlfaDOCKUserLoginPage clickLoginButton() throws Exception {
+		click(buttonLogin, WaitStrategy.CLICKABLE, "loginButton");
 		return new AlfaDOCKUserLoginPage();
 	}
 	

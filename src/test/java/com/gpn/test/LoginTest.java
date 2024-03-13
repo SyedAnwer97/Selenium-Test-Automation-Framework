@@ -7,10 +7,10 @@ import com.gpn.pages.AlfaDOCKCustomerLoginPage;
 
 public final class LoginTest extends BaseTest {
 
-	private  LoginTest() {}
+	private LoginTest() {}
 
 	@Test(enabled = true)
-	public void alfaDOCKLoginTest() {
+	public void alfaDOCKLoginTest() throws Exception {
 		String pageTitle =new AlfaDOCKCustomerLoginPage().selectLangauge("English").enterCustomerUsername("sch-dev")
 		.enterCustomerPassword("sch-dev").clickLoginButton().enterUsername("admin")
 		.enterUserPassword("admin").clickLogin().clickAlfaDOCKLogoutButton().clickUserLogout().pageTitle();

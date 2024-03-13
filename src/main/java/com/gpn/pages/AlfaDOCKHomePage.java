@@ -11,7 +11,7 @@ public final class AlfaDOCKHomePage extends ActionEngine {
 	
 	public AlfaDOCKUserLoginPage clickAlfaDOCKLogoutButton() {
 		if(ExplicitWaitFactory.performExplictWait(WaitStrategy.TITLECHANGE, "alfaDOCK")) {
-		jsClick(iconLogout, WaitStrategy.NONE);
+		jsClick(iconLogout, WaitStrategy.NONE, "alfaDOCKLogoutButton");
 		}
 		return new AlfaDOCKUserLoginPage();
 	}

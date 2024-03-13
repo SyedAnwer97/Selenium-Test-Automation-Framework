@@ -9,9 +9,9 @@ import java.util.Properties;
 import com.gpn.constants.FrameworkConstants;
 import com.gpn.enums.ConfigProperties;
 
-public final class ReadPropertyFile {
+public final class PropertyUtils  {
 
-	private ReadPropertyFile() {}
+	private PropertyUtils () {}
 
 	private static Properties properties = new Properties();
 	private static final Map<String, String> CONFIGMAP = new HashMap<>();

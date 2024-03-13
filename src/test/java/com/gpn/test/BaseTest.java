@@ -8,7 +8,7 @@ import com.gpn.driver.Driver;
 public class BaseTest {
 
 	protected BaseTest() {}
-
+	
 	@BeforeMethod
 	protected void setup() throws Exception {
 		Driver.initDriver();

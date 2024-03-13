@@ -14,23 +14,23 @@ public final class AlfaDOCKUserLoginPage extends ActionEngine{
 	
 	public AlfaDOCKUserLoginPage enterUsername(String username) {
 		if(ExplicitWaitFactory.performExplictWait(WaitStrategy.TITLECHANGE, "UserLogin")) {
-		sendKeys(textboxUsername, WaitStrategy.PRESCENCE, username);
+		sendKeys(textboxUsername, WaitStrategy.PRESCENCE, username, "username");
 		}
 		return this;
 	}
 	
 	public AlfaDOCKUserLoginPage enterUserPassword(String userPassword) {
-		sendKeys(textboxUserPassword, WaitStrategy.PRESCENCE, userPassword);
+		sendKeys(textboxUserPassword, WaitStrategy.PRESCENCE, userPassword, "userPassword");
 		return this;
 	}
 	
-	public AlfaDOCKHomePage clickLogin() {
-		click(buttonLogin, WaitStrategy.CLICKABLE);
+	public AlfaDOCKHomePage clickLogin() throws Exception {
+		click(buttonLogin, WaitStrategy.CLICKABLE, "userLoginButton");
 		return new AlfaDOCKHomePage();
 	}
 	
-	public AlfaDOCKCustomerLoginPage clickUserLogout() {
-		click(buttonLogout, WaitStrategy.CLICKABLE);
+	public AlfaDOCKCustomerLoginPage clickUserLogout() throws Exception {
+		click(buttonLogout, WaitStrategy.CLICKABLE, "userLogoutButton");
 		return new AlfaDOCKCustomerLoginPage();
 	}
 	
