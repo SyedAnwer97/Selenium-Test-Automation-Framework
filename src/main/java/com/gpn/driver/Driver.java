@@ -8,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import com.gpn.enums.ConfigProperties;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import utils.ReadPropertyFile;
+import utils.PropertyUtils;
 
 public final class Driver {
 
@@ -20,7 +20,7 @@ public final class Driver {
 			DriverManager.setDriver(driver);
 			WebDriverManager.chromedriver().setup();
 			DriverManager.getDriver().manage().window().maximize();
-			DriverManager.getDriver().get(ReadPropertyFile.get(ConfigProperties.URL));
+			DriverManager.getDriver().get(PropertyUtils.get(ConfigProperties.URL));
 		}
 	}
 

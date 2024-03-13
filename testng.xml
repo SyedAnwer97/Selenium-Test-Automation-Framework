@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
+	<listeners>
+		<listener class-name="com.gpn.listeners.ListenerClass"></listener>
+	</listeners>
   <test thread-count="4" name="test" parallel="methods">
     <classes>
       <class name="com.gpn.test.LoginTest"/>
-      <!--<class name="com.gpn.test.DummyPageTest"/>-->
+      <class name="com.gpn.test.DummyPageTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
