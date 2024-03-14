@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>3/1/1</td>
+<td>Tests passed/Failed/Skipped:</td><td>24/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Mar 13 14:47:08 JST 2024</td>
+<td>Started on:</td><td>Thu Mar 14 13:26:51 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>25 seconds (25302 ms)</td>
+<tr><td>Total time:</td><td>110 seconds (110282 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,24 +76,34 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.gpn.test.DummyPageTest.test3()'><b>test3</b><br>Test class: com.gpn.test.DummyPageTest</td>
-<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
-	at com.gpn.test.DummyPageTest.test3(DummyPageTest.java:39)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+<td title='com.gpn.test.LoginTest.alfaDOCKLoginTest()'><b>alfaDOCKLoginTest</b><br>Test class: com.gpn.test.LoginTest<br>Test method: To check weather the use can succesfully login and Logout<br>Parameters: {userPassword=service701, customerPassword=sanken123, testname=alfaDOCKLoginTest, execute=yes, customerName=Sanken, username=admin}</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for title to contain &quot;alfaDOCK&quot;. Current title: &quot;UserLogin&quot; (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.113, chrome: {chromedriverVersion: 122.0.6261.128 (f18a44fedeb..., userDataDir: C:\Users\MADMAX~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49884}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49884/devtoo..., se:cdpVersion: 122.0.6261.113, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: db87074e0c34dd3272a43faad0658c6e
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at com.gpn.factories.ExplicitWaitFactory.performExplictWait(ExplicitWaitFactory.java:42)
+	at com.gpn.pages.AlfaDOCKHomePage.clickAlfaDOCKLogoutButton(AlfaDOCKHomePage.java:13)
+	at com.gpn.test.LoginTest.alfaDOCKLoginTest(LoginTest.java:20)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:833)
-... Removed 20 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1239732001", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1239732001'><pre>java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:1067)
-	at org.testng.Assert.assertEquals(Assert.java:1031)
-	at org.testng.Assert.assertEquals(Assert.java:1077)
-	at com.gpn.test.DummyPageTest.test3(DummyPageTest.java:39)
+... Removed 8 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace404236997", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace404236997'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for title to contain &quot;alfaDOCK&quot;. Current title: &quot;UserLogin&quot; (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.113, chrome: {chromedriverVersion: 122.0.6261.128 (f18a44fedeb..., userDataDir: C:\Users\MADMAX~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49884}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49884/devtoo..., se:cdpVersion: 122.0.6261.113, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: db87074e0c34dd3272a43faad0658c6e
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at com.gpn.factories.ExplicitWaitFactory.performExplictWait(ExplicitWaitFactory.java:42)
+	at com.gpn.pages.AlfaDOCKHomePage.clickAlfaDOCKLogoutButton(AlfaDOCKHomePage.java:13)
+	at com.gpn.test.LoginTest.alfaDOCKLoginTest(LoginTest.java:20)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -101,20 +111,14 @@ function toggleAllBoxes() {
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
 	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
 	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:80)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:833)
 </pre></div></td>
-<td>1</td>
-<td>com.gpn.test.DummyPageTest@557caf28</td></tr>
+<td>12</td>
+<td>com.gpn.test.LoginTest@7cc0cdad</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -125,62 +129,125 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.gpn.test.DummyPageTest.test2()'><b>test2</b><br>Test class: com.gpn.test.DummyPageTest</td>
-<td></td>
-<td>2</td>
-<td>com.gpn.test.DummyPageTest@557caf28</td></tr>
-<tr>
-<td title='com.gpn.test.DummyPageTest.test1()'><b>test1</b><br>Test class: com.gpn.test.DummyPageTest</td>
+<td title='com.gpn.test.LoginTest.alfaDOCKLoginTest()'><b>alfaDOCKLoginTest</b><br>Test class: com.gpn.test.LoginTest<br>Test method: To check weather the use can succesfully login and Logout<br>Parameters: {userPassword=admin, customerPassword=SAMETA123, testname=alfaDOCKLoginTest, execute=yes, customerName=SAMETA, username=admin}</td>
 <td></td>
 <td>3</td>
-<td>com.gpn.test.DummyPageTest@557caf28</td></tr>
+<td>com.gpn.test.LoginTest@7cc0cdad</td></tr>
 <tr>
-<td title='com.gpn.test.LoginTest.alfaDOCKLoginTest()'><b>alfaDOCKLoginTest</b><br>Test class: com.gpn.test.LoginTest</td>
+<td title='com.gpn.test.LoginTest.alfaDOCKLoginTest()'><b>alfaDOCKLoginTest</b><br>Test class: com.gpn.test.LoginTest<br>Test method: To check weather the use can succesfully login and Logout<br>Parameters: {userPassword=admin, customerPassword=20, testname=alfaDOCKLoginTest, execute=yes, customerName=sr, username=admin}</td>
+<td></td>
+<td>3</td>
+<td>com.gpn.test.LoginTest@7cc0cdad</td></tr>
+<tr>
+<td title='com.gpn.test.LoginTest.alfaDOCKLoginTest()'><b>alfaDOCKLoginTest</b><br>Test class: com.gpn.test.LoginTest<br>Test method: To check weather the use can succesfully login and Logout<br>Parameters: {userPassword=admin, customerPassword=makino123, testname=alfaDOCKLoginTest, execute=yes, customerName=makino, username=admin}</td>
+<td></td>
+<td>4</td>
+<td>com.gpn.test.LoginTest@7cc0cdad</td></tr>
+<tr>
+<td title='com.gpn.test.LoginTest.alfaDOCKLoginTest()'><b>alfaDOCKLoginTest</b><br>Test class: com.gpn.test.LoginTest<br>Test method: To check weather the use can succesfully login and Logout<br>Parameters: {userPassword=admin, customerPassword=ohashi1916, testname=alfaDOCKLoginTest, execute=yes, customerName=ohashi, username=admin}</td>
 <td></td>
 <td>5</td>
-<td>com.gpn.test.LoginTest@128d2484</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-skipped'>
-<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td><b>Attribute(s)</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
+<td>com.gpn.test.LoginTest@7cc0cdad</td></tr>
 <tr>
-<td title='com.gpn.test.DummyPageTest.test4()'><b>test4</b><br>Test class: com.gpn.test.DummyPageTest</td>
-<td><div><pre>org.testng.SkipException: Skipping this exception
-	at com.gpn.test.DummyPageTest.test4(DummyPageTest.java:46)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-... Removed 13 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1154227854", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1154227854'><pre>org.testng.SkipException: Skipping this exception
-	at com.gpn.test.DummyPageTest.test4(DummyPageTest.java:46)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-</pre></div></td>
-<td>0</td>
-<td>com.gpn.test.DummyPageTest@557caf28</td></tr>
+<td title='com.gpn.test.LoginTest.alfaDOCKLoginTest()'><b>alfaDOCKLoginTest</b><br>Test class: com.gpn.test.LoginTest<br>Test method: To check weather the use can succesfully login and Logout<br>Parameters: {userPassword=admin, customerPassword=iwa123, testname=alfaDOCKLoginTest, execute=yes, customerName=iwa, username=admin}</td>
+<td></td>
+<td>3</td>
+<td>com.gpn.test.LoginTest@7cc0cdad</td></tr>
+<tr>
+<td title='com.gpn.test.LoginTest.alfaDOCKLoginTest()'><b>alfaDOCKLoginTest</b><br>Test class: com.gpn.test.LoginTest<br>Test method: To check weather the use can succesfully login and Logout<br>Parameters: {userPassword=admin, customerPassword=makabei123, testname=alfaDOCKLoginTest, execute=yes, customerName=Makabe-I, username=admin}</td>
+<td></td>
+<td>5</td>
+<td>com.gpn.test.LoginTest@7cc0cdad</td></tr>
+<tr>
+<td title='com.gpn.test.LoginTest.alfaDOCKLoginTest()'><b>alfaDOCKLoginTest</b><br>Test class: com.gpn.test.LoginTest<br>Test method: To check weather the use can succesfully login and Logout<br>Parameters: {userPassword=admin, customerPassword=KANE, testname=alfaDOCKLoginTest, execute=yes, customerName=KANEYOSHI, username=admin}</td>
+<td></td>
+<td>4</td>
+<td>com.gpn.test.LoginTest@7cc0cdad</td></tr>
+<tr>
+<td title='com.gpn.test.LoginTest.alfaDOCKLoginTest()'><b>alfaDOCKLoginTest</b><br>Test class: com.gpn.test.LoginTest<br>Test method: To check weather the use can succesfully login and Logout<br>Parameters: {userPassword=service701, customerPassword=yoshimi, testname=alfaDOCKLoginTest, execute=yes, customerName=yoshimi, username=admin}</td>
+<td></td>
+<td>4</td>
+<td>com.gpn.test.LoginTest@7cc0cdad</td></tr>
+<tr>
+<td title='com.gpn.test.LoginTest.alfaDOCKLoginTest()'><b>alfaDOCKLoginTest</b><br>Test class: com.gpn.test.LoginTest<br>Test method: To check weather the use can succesfully login and Logout<br>Parameters: {userPassword=admin, customerPassword=0037, testname=alfaDOCKLoginTest, execute=yes, customerName=sds, username=admin}</td>
+<td></td>
+<td>4</td>
+<td>com.gpn.test.LoginTest@7cc0cdad</td></tr>
+<tr>
+<td title='com.gpn.test.LoginTest.alfaDOCKLoginTest()'><b>alfaDOCKLoginTest</b><br>Test class: com.gpn.test.LoginTest<br>Test method: To check weather the use can succesfully login and Logout<br>Parameters: {userPassword=admin, customerPassword=umeda123, testname=alfaDOCKLoginTest, execute=yes, customerName=umeda, username=admin}</td>
+<td></td>
+<td>14</td>
+<td>com.gpn.test.LoginTest@7cc0cdad</td></tr>
+<tr>
+<td title='com.gpn.test.LoginTest.alfaDOCKLoginTest()'><b>alfaDOCKLoginTest</b><br>Test class: com.gpn.test.LoginTest<br>Test method: To check weather the use can succesfully login and Logout<br>Parameters: {userPassword=admin, customerPassword=123, testname=alfaDOCKLoginTest, execute=yes, customerName=shinkousha, username=admin}</td>
+<td></td>
+<td>5</td>
+<td>com.gpn.test.LoginTest@7cc0cdad</td></tr>
+<tr>
+<td title='com.gpn.test.LoginTest.alfaDOCKLoginTest()'><b>alfaDOCKLoginTest</b><br>Test class: com.gpn.test.LoginTest<br>Test method: To check weather the use can succesfully login and Logout<br>Parameters: {userPassword=admin, customerPassword=sinsyo888, testname=alfaDOCKLoginTest, execute=yes, customerName=sinsyo, username=admin}</td>
+<td></td>
+<td>3</td>
+<td>com.gpn.test.LoginTest@7cc0cdad</td></tr>
+<tr>
+<td title='com.gpn.test.LoginTest.alfaDOCKLoginTest()'><b>alfaDOCKLoginTest</b><br>Test class: com.gpn.test.LoginTest<br>Test method: To check weather the use can succesfully login and Logout<br>Parameters: {userPassword=admin, customerPassword=ntc3119, testname=alfaDOCKLoginTest, execute=yes, customerName=77727, username=admin}</td>
+<td></td>
+<td>4</td>
+<td>com.gpn.test.LoginTest@7cc0cdad</td></tr>
+<tr>
+<td title='com.gpn.test.LoginTest.alfaDOCKLoginTest()'><b>alfaDOCKLoginTest</b><br>Test class: com.gpn.test.LoginTest<br>Test method: To check weather the use can succesfully login and Logout<br>Parameters: {userPassword=admin, customerPassword=dt9969316, testname=alfaDOCKLoginTest, execute=yes, customerName=daitoh-t1966, username=admin}</td>
+<td></td>
+<td>4</td>
+<td>com.gpn.test.LoginTest@7cc0cdad</td></tr>
+<tr>
+<td title='com.gpn.test.LoginTest.alfaDOCKLoginTest()'><b>alfaDOCKLoginTest</b><br>Test class: com.gpn.test.LoginTest<br>Test method: To check weather the use can succesfully login and Logout<br>Parameters: {userPassword=admin, customerPassword=musasi123, testname=alfaDOCKLoginTest, execute=yes, customerName=Musasi-kogyo, username=admin}</td>
+<td></td>
+<td>4</td>
+<td>com.gpn.test.LoginTest@7cc0cdad</td></tr>
+<tr>
+<td title='com.gpn.test.LoginTest.alfaDOCKLoginTest()'><b>alfaDOCKLoginTest</b><br>Test class: com.gpn.test.LoginTest<br>Test method: To check weather the use can succesfully login and Logout<br>Parameters: {userPassword=admin, customerPassword=makabea123, testname=alfaDOCKLoginTest, execute=yes, customerName=Makabe-A, username=admin}</td>
+<td></td>
+<td>5</td>
+<td>com.gpn.test.LoginTest@7cc0cdad</td></tr>
+<tr>
+<td title='com.gpn.test.LoginTest.alfaDOCKLoginTest()'><b>alfaDOCKLoginTest</b><br>Test class: com.gpn.test.LoginTest<br>Test method: To check weather the use can succesfully login and Logout<br>Parameters: {userPassword=service701, customerPassword=123, testname=alfaDOCKLoginTest, execute=yes, customerName=asuna, username=admin}</td>
+<td></td>
+<td>4</td>
+<td>com.gpn.test.LoginTest@7cc0cdad</td></tr>
+<tr>
+<td title='com.gpn.test.LoginTest.alfaDOCKLoginTest()'><b>alfaDOCKLoginTest</b><br>Test class: com.gpn.test.LoginTest<br>Test method: To check weather the use can succesfully login and Logout<br>Parameters: {userPassword=service701, customerPassword=9771836, testname=alfaDOCKLoginTest, execute=yes, customerName=tanakasangyo, username=admin}</td>
+<td></td>
+<td>8</td>
+<td>com.gpn.test.LoginTest@7cc0cdad</td></tr>
+<tr>
+<td title='com.gpn.test.LoginTest.alfaDOCKLoginTest()'><b>alfaDOCKLoginTest</b><br>Test class: com.gpn.test.LoginTest<br>Test method: To check weather the use can succesfully login and Logout<br>Parameters: {userPassword=admin, customerPassword=Reborn-eiwa, testname=alfaDOCKLoginTest, execute=yes, customerName=eiwakiko, username=admin}</td>
+<td></td>
+<td>4</td>
+<td>com.gpn.test.LoginTest@7cc0cdad</td></tr>
+<tr>
+<td title='com.gpn.test.LoginTest.alfaDOCKLoginTest()'><b>alfaDOCKLoginTest</b><br>Test class: com.gpn.test.LoginTest<br>Test method: To check weather the use can succesfully login and Logout<br>Parameters: {userPassword=admin, customerPassword=sss1970, testname=alfaDOCKLoginTest, execute=yes, customerName=sakaiss, username=admin}</td>
+<td></td>
+<td>4</td>
+<td>com.gpn.test.LoginTest@7cc0cdad</td></tr>
+<tr>
+<td title='com.gpn.test.LoginTest.alfaDOCKLoginTest()'><b>alfaDOCKLoginTest</b><br>Test class: com.gpn.test.LoginTest<br>Test method: To check weather the use can succesfully login and Logout<br>Parameters: {userPassword=admin, customerPassword=unozawa, testname=alfaDOCKLoginTest, execute=yes, customerName=unozawa, username=admin}</td>
+<td></td>
+<td>4</td>
+<td>com.gpn.test.LoginTest@7cc0cdad</td></tr>
+<tr>
+<td title='com.gpn.test.LoginTest.alfaDOCKLoginTest()'><b>alfaDOCKLoginTest</b><br>Test class: com.gpn.test.LoginTest<br>Test method: To check weather the use can succesfully login and Logout<br>Parameters: {userPassword=admin, customerPassword=axis10061952, testname=alfaDOCKLoginTest, execute=yes, customerName=axis, username=admin}</td>
+<td></td>
+<td>4</td>
+<td>com.gpn.test.LoginTest@7cc0cdad</td></tr>
+<tr>
+<td title='com.gpn.test.LoginTest.alfaDOCKLoginTest()'><b>alfaDOCKLoginTest</b><br>Test class: com.gpn.test.LoginTest<br>Test method: To check weather the use can succesfully login and Logout<br>Parameters: {userPassword=admin, customerPassword=7241, testname=alfaDOCKLoginTest, execute=yes, customerName=uni, username=admin}</td>
+<td></td>
+<td>3</td>
+<td>com.gpn.test.LoginTest@7cc0cdad</td></tr>
+<tr>
+<td title='com.gpn.test.LoginTest.alfaDOCKLoginTest()'><b>alfaDOCKLoginTest</b><br>Test class: com.gpn.test.LoginTest<br>Test method: To check weather the use can succesfully login and Logout<br>Parameters: {userPassword=admin, customerPassword=7586, testname=alfaDOCKLoginTest, execute=yes, customerName=akaishik, username=admin}</td>
+<td></td>
+<td>5</td>
+<td>com.gpn.test.LoginTest@7cc0cdad</td></tr>
 </table><p>
 </body>
 </html>
