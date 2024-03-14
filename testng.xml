@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Suite">
+<suite name="Suite" data-provider-thread-count="2">
 	<listeners>
 		<listener class-name="com.gpn.listeners.ListenerClass"></listener>
+		<listener class-name="com.gpn.listeners.MethodInterceptor"></listener>
 	</listeners>
-  <test thread-count="4" name="test" parallel="methods">
+  <test thread-count="2" name="test" parallel="methods">
     <classes>
       <class name="com.gpn.test.LoginTest"/>
       <class name="com.gpn.test.DummyPageTest"/>
     </classes>
-  </test> <!-- Test -->
-</suite> <!-- Suite -->
+  </test> 
+</suite>
   
