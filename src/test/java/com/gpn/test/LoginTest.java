@@ -13,7 +13,7 @@ public final class LoginTest extends BaseTest {
 
 	private LoginTest() {}
 
-	@Test(enabled = true, dataProvider = "getData", dataProviderClass = DataProviderUtils.class)
+	@Test(enabled = true)
 	public void alfaDOCKLoginTest(Map<String, String> data) throws Exception {
 		String pageTitle =new AlfaDOCKCustomerLoginPage().selectLangauge("English").enterCustomerUsername(data.get("customerName"))
 		.enterCustomerPassword(data.get("customerPassword")).clickLoginButton().enterUsername(data.get("username"))

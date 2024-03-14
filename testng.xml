@@ -4,6 +4,7 @@
 	<listeners>
 		<listener class-name="com.gpn.listeners.ListenerClass"></listener>
 		<listener class-name="com.gpn.listeners.MethodInterceptor"></listener>
+		<listener class-name="com.gpn.listeners.AnnotationTransformer"></listener>
 	</listeners>
   <test thread-count="2" name="test" parallel="methods">
     <classes>
